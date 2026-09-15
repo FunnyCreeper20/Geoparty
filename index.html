@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#111926">
+	<title>Geoparty | Choose your game</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="home-shell">
+		<nav class="topbar" aria-label="Primary navigation">
+			<a class="brand" href="index.html" aria-label="Geoparty home">
+				<span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+				<span>GEOPARTY</span>
+			</a>
+			<div class="status-pill"><span class="status-dot"></span> READY TO PLAY</div>
+		</nav>
+
+		<section class="hero" aria-labelledby="page-title">
+			<p class="eyebrow"><span class="eyebrow-line"></span> GAME NIGHT, SORTED</p>
+			<h1 id="page-title">Pick your<br><em>game.</em></h1>
+			<p class="hero-copy">Bring everyone in. Choose a format, make some noise, and let the best team win.</p>
+		</section>
+
+		<section class="game-picker" aria-labelledby="game-picker-title">
+			<div class="section-heading">
+				<h2 id="game-picker-title">Choose your arena</h2>
+				<span class="mono-label">01 / 02</span>
+			</div>
+
+			<div class="game-grid">
+				<button class="game-card feud-card" type="button" data-game="Family Feud" aria-pressed="false">
+					<div class="card-topline"><span>01</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+					<div class="card-illustration feud-illustration" aria-hidden="true">
+						<span class="feud-speech speech-one">SURVEY SAYS</span>
+						<span class="feud-speech speech-two">100</span>
+						<span class="feud-star">✦</span>
+					</div>
+					<div class="card-content">
+						<p class="card-kicker">TEAM VS TEAM</p>
+						<h3>Family Feud</h3>
+						<p>Guess what the crowd is thinking. Fast answers, big reactions, zero quiet moments.</p>
+					</div>
+					<span class="select-indicator" aria-hidden="true"></span>
+				</button>
+
+				<button class="game-card jeopardy-card" type="button" data-game="Jeopardy" aria-pressed="false">
+					<div class="card-topline"><span>02</span><span class="card-arrow" aria-hidden="true">↗</span></div>
+					<div class="card-illustration jeopardy-illustration" aria-hidden="true">
+						<span class="jeopardy-square square-one">?</span>
+						<span class="jeopardy-square square-two">$</span>
+						<span class="jeopardy-square square-three">!</span>
+						<span class="jeopardy-label">FINAL<br>ROUND</span>
+					</div>
+					<div class="card-content">
+						<p class="card-kicker">SOLO OR SQUAD</p>
+						<h3>Jeopardy</h3>
+						<p>Pick a category, wager your points, and prove you know a little about everything.</p>
+					</div>
+					<span class="select-indicator" aria-hidden="true"></span>
+				</button>
+			</div>
+		</section>
+
+		<div class="action-row">
+			<p class="selection-message" aria-live="polite">Select a game to get started</p>
+			<button class="start-button" type="button" disabled>
+				<span>Start game</span><span class="button-arrow" aria-hidden="true">→</span>
+			</button>
+		</div>
+
+		<footer class="footer"><span>GEOPARTY / 2024</span><span>MAKE IT A NIGHT</span></footer>
+	</main>
+
+	<main class="builder-shell" hidden>
+		<nav class="topbar" aria-label="Builder navigation">
+			<button class="back-button" type="button"><span aria-hidden="true">←</span> Back to games</button>
+			<div class="status-pill"><span class="status-dot"></span> BUILD MODE</div>
+		</nav>
+
+		<section class="builder-header">
+			<p class="eyebrow" id="builder-eyebrow"><span class="eyebrow-line"></span> FAMILY FEUD / TEMPLATE</p>
+			<h1>Make it<br><em>yours.</em></h1>
+			<p class="hero-copy">Start with a blank board, then add the details that make your game night yours.</p>
+		</section>
+
+		<section class="builder-layout" aria-label="Family Feud game builder">
+			<form class="builder-form">
+				<div class="builder-section">
+					<div class="section-heading"><h2>01 / Board setup</h2><span class="mono-label">IDENTITY</span></div>
+					<label class="field-label" for="game-title">Game title</label>
+					<input class="text-input" id="game-title" type="text" placeholder="My Family Feud" autocomplete="off">
+					<div class="category-field" hidden><label class="field-label" for="category-name">Category name</label><input class="text-input" id="category-name" type="text" placeholder="Movies" autocomplete="off"></div>
+					<label class="field-label" id="prompt-label" for="survey-question">Survey question</label>
+					<input class="text-input" id="survey-question" type="text" placeholder="Name something people do on a road trip" autocomplete="off">
+				</div>
+
+				<div class="builder-section">
+					<div class="section-heading"><h2>02 / Look and feel</h2><span class="mono-label">STYLE</span></div>
+					<label class="field-label" for="board-color">Accent color</label>
+					<div class="color-field"><input id="board-color" type="color" value="#ff765d"><span class="color-value">#FF765D</span></div>
+					<label class="field-label" for="board-background">Board background</label>
+					<div class="color-field"><input id="board-background" type="color" value="#1b2532"><span class="background-color-value">#1B2532</span></div>
+					<label class="field-label" for="board-image">Board image</label>
+					<label class="upload-field" for="board-image"><span class="upload-icon" aria-hidden="true">↑</span><span><strong>Upload an image</strong><small>PNG, JPG, or WEBP</small></span></label>
+					<input id="board-image" class="visually-hidden" type="file" accept="image/png,image/jpeg,image/webp">
+				</div>
+
+				<div class="builder-section answers-section">
+					<div class="section-heading"><h2 id="entries-heading">03 / Survey answers</h2><span class="mono-label" id="entries-label">POINTS</span></div>
+					<div class="answer-list">
+						<label class="answer-row"><span class="answer-number">01</span><input type="text" placeholder="Top answer"><input type="number" min="0" placeholder="0" aria-label="Points for answer 1"><button class="remove-answer" type="button" aria-label="Remove answer 1">×</button></label>
+						<label class="answer-row"><span class="answer-number">02</span><input type="text" placeholder="Second answer"><input type="number" min="0" placeholder="0" aria-label="Points for answer 2"><button class="remove-answer" type="button" aria-label="Remove answer 2">×</button></label>
+						<label class="answer-row"><span class="answer-number">03</span><input type="text" placeholder="Third answer"><input type="number" min="0" placeholder="0" aria-label="Points for answer 3"><button class="remove-answer" type="button" aria-label="Remove answer 3">×</button></label>
+					</div>
+					<button class="add-answer" type="button">+ Add answer</button>
+				</div>
+			</form>
+
+			<aside class="board-preview" aria-label="Live board preview">
+				<div class="preview-label"><span>LIVE PREVIEW</span><span class="preview-dot">●</span></div>
+				<div class="preview-board">
+					<div class="preview-image"><span class="preview-upload">↑<small>Add board image</small></span></div>
+					<div class="preview-inner">
+						<p class="preview-kicker" id="preview-kicker">FAMILY FEUD</p>
+						<h2 class="preview-title">My Family Feud</h2>
+						<p class="preview-question">Your survey question will appear here</p>
+						<div class="preview-answers"><div><span>01</span><strong>Top answer</strong><b>--</b></div><div><span>02</span><strong>Second answer</strong><b>--</b></div><div><span>03</span><strong>Third answer</strong><b>--</b></div></div>
+					</div>
+				</div>
+			</aside>
+		</section>
+		<div class="builder-actions">
+			<p class="builder-note">Your board stays in this browser until you are ready to play.</p>
+			<button class="download-button" id="download-button" type="button"><span aria-hidden="true">↓</span> Download JSON</button>
+			<button class="present-button" id="present-button" type="button"><span aria-hidden="true">↗</span> Open projector screen</button>
+		</div>
+	</main>
+	<script src="index.js"></script>
+</body>
+</html>
